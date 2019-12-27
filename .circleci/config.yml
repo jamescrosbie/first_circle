@@ -17,6 +17,7 @@ jobs:
       - run:
           name: run tests
           command: |
+            cd ~/repo
             py.test
 
       - store_artifacts:
