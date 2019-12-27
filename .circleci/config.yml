@@ -20,7 +20,7 @@ jobs:
     - run:
         name: run tests
         command: |
-            py.test
+            py.test -v
 
     - store_artifacts:
         path: test-reports
