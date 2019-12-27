@@ -15,19 +15,12 @@ jobs:
     - run:
         name: install dependencies
         command: |
-            sudo pip install pipenv
-            pipenv install
             sudo pip3 install -r requirements.txt
-
-    - save_cache:
-        paths:
-        - ./venv
 
     - run:
         name: run tests
         command: |
-          . venv/bin/activate
-          pipenv run python basic.py test
+            py.test
 
     - store_artifacts:
         path: test-reports
