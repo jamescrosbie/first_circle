@@ -28,6 +28,6 @@ jobs:
 
 workflows:
   version: 2
-  workflow:
+  workflow_name:
     jobs:
     - build
